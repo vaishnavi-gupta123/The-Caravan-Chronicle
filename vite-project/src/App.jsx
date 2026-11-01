@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import StaffLogin from "./components/admin/StaffLogin";
 
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminDashboard from "./components/admin/AdminDashboard";
+
 
 import AllComplaints from "./components/admin/AllComplaints";
 import ComplaintDetails from "./components/admin/ComplaintDetails";
@@ -138,6 +140,8 @@ function App() {
           path="*"
           element={<Navigate to="/admin/login" replace />}
         />
+
+        <Route path="/staff/login" element={<StaffLogin />} />
 
       </Routes>
     </BrowserRouter>
